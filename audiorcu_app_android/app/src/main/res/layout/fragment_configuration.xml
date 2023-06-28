@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *******************************************************************************
+ *
+ * Copyright (C) 2017-2018 Dialog Semiconductor.
+ * This computer program includes Confidential, Proprietary Information
+ * of Dialog Semiconductor. All Rights Reserved.
+ *
+ *******************************************************************************
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey_light" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_large"
+    android:scrollbars="vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/conn_params_section"
+        android:textSize="18sp"
+        android:textColor="@color/md_blue_800"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:id="@+id/interval_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/conn_interval"
+                android:textColor="#222"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/curr_interval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/value_not_available"
+                android:textColor="#666"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/min_interval_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/min_interval"
+            android:layout_alignTop="@+id/min_interval"
+            android:layout_alignBottom="@+id/min_interval"
+            android:layout_alignStart="@+id/max_interval_title"
+            android:text="@string/min_interval"
+            android:gravity="center_vertical"
+            android:textColor="#222"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/min_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/min_interval_unit"
+            android:hint="@string/min_interval_hint"
+            android:inputType="number"
+            android:minEms="3"
+            android:maxEms="3"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/min_interval_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/min_interval"
+            android:layout_alignBottom="@+id/min_interval"
+            android:layout_marginStart="4dp"
+            android:text="@string/conn_interval_unit"
+            android:gravity="center_vertical"
+            android:textColor="#666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/max_interval_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/max_interval"
+            android:layout_alignTop="@+id/max_interval"
+            android:layout_alignBottom="@+id/max_interval"
+            android:text="@string/max_interval"
+            android:gravity="center_vertical"
+            android:textColor="#222"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/max_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/min_interval"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/max_interval_unit"
+            android:hint="@string/max_interval_hint"
+            android:inputType="number"
+            android:minEms="3"
+            android:maxEms="3"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/max_interval_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/max_interval"
+            android:layout_alignBottom="@+id/max_interval"
+            android:layout_marginStart="4dp"
+            android:text="@string/conn_interval_unit"
+            android:gravity="center_vertical"
+            android:textColor="#666"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/slave_latency_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slave_latency"
+                android:textColor="#222"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/curr_slave_latency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/value_not_available"
+                android:textColor="#666"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/slave_latency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/slave_latency_unit"
+            android:hint="@string/slave_latency_hint"
+            android:inputType="number"
+            android:minEms="3"
+            android:maxEms="3"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/slave_latency_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:text="@string/slave_latency_unit"
+            android:textColor="#666"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/conn_timeout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/conn_timeout"
+                android:textColor="#222"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/curr_conn_timeout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/value_not_available"
+                android:textColor="#666"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/conn_timeout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/conn_timeout_unit"
+            android:hint="@string/conn_timeout_hint"
+            android:inputType="number"
+            android:minEms="4"
+            android:maxEms="4"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/conn_timeout_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:text="@string/conn_timeout_unit"
+            android:textColor="#666"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/update_params_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:minEms="15"
+        android:text="@string/update_conn_params" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/packet_size_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/packet_size"
+                android:textColor="#222"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/curr_packet_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/value_not_available"
+                android:textColor="#666"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/packet_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/packet_size_unit"
+            android:hint="@string/packet_size_hint"
+            android:inputType="number"
+            android:minEms="4"
+            android:maxEms="4"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/packet_size_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:text="@string/packet_size_unit"
+            android:textColor="#666"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/set_max_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="@string/set_max" />
+
+        <Button
+            android:id="@+id/set_fixed_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="@string/set_fixed" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="#ccc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/app_config_section"
+        android:textSize="18sp"
+        android:textColor="@color/md_blue_800"
+        android:textStyle="bold" />
+
+    <Switch
+        android:id="@+id/voice_rec_partial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/voice_rec_partial_results"
+        android:textSize="18sp" />
+
+    <Switch
+        android:id="@+id/auto_save_audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/auto_save_audio_capture"
+        android:textSize="18sp" />
+
+    <Switch
+        android:id="@+id/auto_pairing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/auto_pairing"
+        android:textSize="18sp" />
+
+    <Switch
+        android:id="@+id/auto_init_system_hid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_init_system_hid"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#ccc" />
+
+</LinearLayout>
+</ScrollView>

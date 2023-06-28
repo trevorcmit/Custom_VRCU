@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *******************************************************************************
+ *
+ * Copyright (C) 2017 Dialog Semiconductor.
+ * This computer program includes Confidential, Proprietary Information
+ * of Dialog Semiconductor. All Rights Reserved.
+ *
+ *******************************************************************************
+-->
+<resources>
+
+    <color name="status_bar_background">#296192</color>
+    <color name="navigation_bar_background">#347ab8</color>
+    <color name="button_color">#347ab8</color>
+    <color name="background_grey_light">#f1f1f1</color>
+    <color name="background_grey_dark">#ffe4e4e4</color>
+    <color name="signal_bar_colour">#347ab8</color>
+    <color name="signal_bar_non_active_colour">#AAAAAA</color>
+    <color name="menu_non_active">#CCCCCC</color>
+    <color name="item_background">#F0F0F0</color>
+
+</resources>

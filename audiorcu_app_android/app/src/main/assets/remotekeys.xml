@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *******************************************************************************
+ *
+ * Copyright (C) 2017 Dialog Semiconductor.
+ * This computer program includes Confidential, Proprietary Information
+ * of Dialog Semiconductor. All Rights Reserved.
+ *
+ *******************************************************************************
+-->
+<remotes>
+
+    <remote name="DA14582" ptt="PTT" code="0x00" rows="12" cols="5" >
+        <key name="Pwr"     row="1" col="3">0x0310</key>
+        <key name="Menu"    row="2" col="1">0x0308</key>
+        <key name="Esc"     row="2" col="5">0x0340</key>
+        <key name="Up"      row="3" col="3">0x0052</key>
+        <key name="Left"    row="4" col="2">0x0050</key>
+        <key name="Select"  row="4" col="3">0x0028</key>
+        <key name="Right"   row="4" col="4">0x004F</key>
+        <key name="Down"    row="5" col="3">0x0051</key>
+        <key name="Vol +"   row="6" col="1">0x0140</key>
+        <key name="PTT"     row="6" col="3">0x0000</key>
+        <key name="+"       row="6" col="5">0x0057</key>
+        <key name="Vol -"   row="7" col="2">0x0180</key>
+        <key name="-"       row="7" col="4">0x0056</key>
+        <key name="Mute"    row="8" col="3">0x0120</key>
+        <key name="1"       row="9" col="1">0x001E</key>
+        <key name="2"       row="9" col="3">0x001F</key>
+        <key name="3"       row="9" col="5">0x0020</key>
+        <key name="4"       row="10" col="1">0x0021</key>
+        <key name="5"       row="10" col="3">0x0022</key>
+        <key name="6"       row="10" col="5">0x0023</key>
+        <key name="7"       row="11" col="1">0x0024</key>
+        <key name="8"       row="11" col="3">0x0025</key>
+        <key name="9"       row="11" col="5">0x0026</key>
+        <key name="*"       row="12" col="1" mod="true">0x0225</key>
+        <key name="0"       row="12" col="3">0x0027</key>
+        <key name="#"       row="12" col="5" mod="true">0x0220</key>
+        <key name="Rwd"     hide="true">0x0102</key>
+        <key name="Play"    hide="true">0x0110</key>
+        <key name="Stop"    hide="true">0x0104</key>
+    </remote>
+
+    <remote name="KeyPad" ptt="PTT" code="0x01" rows="9" cols="5">
+        <key name="1"       row="3" col="1">0x001E</key>
+        <key name="2"       row="3" col="3">0x001F</key>
+        <key name="3"       row="3" col="5">0x0020</key>
+        <key name="4"       row="5" col="1">0x0021</key>
+        <key name="5"       row="5" col="3">0x0022</key>
+        <key name="6"       row="5" col="5">0x0023</key>
+        <key name="7"       row="7" col="1">0x0024</key>
+        <key name="8"       row="7" col="3">0x0025</key>
+        <key name="9"       row="7" col="5">0x0026</key>
+        <key name="PTT"     row="9" col="1">0x0000</key>
+        <key name="0"       row="9" col="3">0x0027</key>
+        <key name="Mouse"   row="9" col="5" disabled="true">0x0000</key>
+    </remote>
+
+    <remote name="D-Pad" ptt="PTT" code="0x02" rows="9" cols="5">
+        <key name="CLick"   row="3" col="1" disabled="true">0x0000</key>
+        <key name="Up"      row="3" col="3">0x0052</key>
+        <key name="Back"    row="3" col="5">0x0240</key>
+        <key name="Left"    row="5" col="1">0x0050</key>
+        <key name="Select"  row="5" col="3">0x0028</key>
+        <key name="Right"   row="5" col="5">0x004F</key>
+        <key name="Vol -"   row="7" col="1">0x0180</key>
+        <key name="Down"    row="7" col="3">0x0051</key>
+        <key name="Vol +"   row="7" col="5">0x0140</key>
+        <key name="PTT"     row="9" col="1">0x0000</key>
+        <key name="Tab"     row="9" col="3">0x002B</key>
+        <key name="KeyPad"  row="9" col="5" disabled="true">0x0000</key>
+    </remote>
+
+    <remote name="BLE Remote" ptt="SW9" code="0x10">
+        <key name="SW1" row="0" col="2">0x0010</key>
+        <key name="SW2" row="1" col="0">0x0120</key>
+        <key name="SW3" row="1" col="4">0x12</key>
+        <key name="SW4" row="2" col="2">0x52</key>
+        <key name="SW5" row="3" col="0">0x50</key>
+        <key name="SW6" row="3" col="2">0x28</key>
+        <key name="SW7" row="3" col="4">0x4f</key>
+        <key name="SW8" row="4" col="2">0x51</key>
+        <key name="SW9" row="5" col="2">0x0001</key>
+        <key name="SW10" row="6" col="0">0x0140</key>
+        <key name="SW11" row="6" col="4">0x57</key>
+        <key name="SW12" row="7" col="1">0x0180</key>
+        <key name="SW13" row="7" col="3">0x56</key>
+        <key name="SW14" row="8" col="0">0x1E</key>
+        <key name="SW15" row="8" col="2">0x1F</key>
+        <key name="SW16" row="8" col="4">0x20</key>
+        <key name="SW17" row="9" col="0">0x21</key>
+        <key name="SW18" row="9" col="2">0x22</key>
+        <key name="SW19" row="9" col="4">0x23</key>
+        <key name="SW20" row="10" col="0">0x24</key>
+        <key name="SW21" row="10" col="2">0x25</key>
+        <key name="SW22" row="10" col="4">0x26</key>
+        <key name="SW23" row="11" col="2">0x27</key>
+        <key name="SW24" row="12" col="0">0x0102</key>
+        <key name="SW25" row="12" col="1">0x0110</key>
+        <key name="SW26" row="12" col="3">0x0101</key>
+        <key name="SW27" row="12" col="4">0x0104</key>
+    </remote>
+
+</remotes>

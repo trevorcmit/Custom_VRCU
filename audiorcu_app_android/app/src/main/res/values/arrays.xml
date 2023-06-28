@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *******************************************************************************
+ *
+ * Copyright (C) 2017 Dialog Semiconductor.
+ * This computer program includes Confidential, Proprietary Information
+ * of Dialog Semiconductor. All Rights Reserved.
+ *
+ *******************************************************************************
+-->
+<resources>
+
+    <string-array name="bitrate_titles">
+        <item>64 kbps</item>
+        <item>48 kbps</item>
+        <item>32 kbps</item>
+        <item>24 kbps</item>
+        <item>Automatic</item>
+    </string-array>
+    <string-array name="bitrate_values">
+        <item>64 kbps</item>
+        <item>48 kbps</item>
+        <item>32 kbps</item>
+        <item>24 kbps</item>
+        <item>Automatic</item>
+    </string-array>
+    <string-array name="mode_titles">
+        <item>Live Capture</item>
+        <item>Voice Command</item>
+        <item>Speech Recognizer</item>
+        <item>Audio Record</item>
+    </string-array>
+    <string-array name="mode_values">
+        <item>Live capture</item>
+        <item>Command</item>
+    </string-array>
+    <string-array name="voice_command_titles">
+        <item>Keyword</item>
+        <item>Google Search</item>
+        <item>IMDB Search</item>
+        <item>YouTube Search</item>
+    </string-array>
+    <string-array name="voice_command_values">
+        <item>Keyword</item>
+        <item>Google</item>
+        <item>IMDB</item>
+        <item>YouTube</item>
+    </string-array>
+
+    <!-- Language names/codes arrays must be consistent with each other -->
+    <string-array name="voice_rec_lang_names">
+        <item>Auto detect language</item>
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Dutch</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+        <item>Russian</item>
+        <item>Spanish</item>
+    </string-array>
+    <string-array name="voice_rec_lang_codes">
+        <item>auto</item>
+        <item>en-US</item>
+        <item>zh</item>
+        <item>nl-NL</item>
+        <item>fr-FR</item>
+        <item>de-DE</item>
+        <item>el</item>
+        <item>it-IT</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ru</item>
+        <item>es-ES</item>
+    </string-array>
+
+</resources>

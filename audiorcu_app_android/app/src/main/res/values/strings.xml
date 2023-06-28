@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *******************************************************************************
+ *
+ * Copyright (C) 2017-2018 Dialog Semiconductor.
+ * This computer program includes Confidential, Proprietary Information
+ * of Dialog Semiconductor. All Rights Reserved.
+ *
+ *******************************************************************************
+-->
+<resources>
+
+    <string name="app_name">Voice RCU</string>
+    <string name="dialog_semiconductor">Dialog Semiconductor</string>
+
+    <string name="location_permission_rationale">Access to location information is required in order to scan for Bluetooth Smart devices.</string>
+    <string name="no_bluetooth_privileged_title">Missing required permission</string>
+    <string name="no_bluetooth_privileged_msg">
+        Starting from Android 5.1, only privileged system apps can access the HID profile, so the app can\'t work properly.
+        The app can be converted to privileged system on a rooted device (the system image must be modified).
+        You may also use a RCU that supports Dialog\'s custom profile, which doesn\'t need special permissions.
+    </string>
+    <string name="hid_connection_timeout_title">HID connection timeout</string>
+    <string name="hid_connection_timeout_msg">
+        The system HID service failed to connect to the RCU.
+        You may need to unpair from the RCU or restart Bluetooth.
+    </string>
+    <string name="hid_connection_timeout_settings">Settings</string>
+    <string name="hid_connection_timeout_unpair">Unpair</string>
+
+    <!-- START -->
+
+    <string name="text_scanning">Scanning&#8230;</string>
+    <string name="text_connecting">Connecting&#8230;</string>
+    <string name="text_initializing">Initializing&#8230;</string>
+    <string name="empty_device_list">No devices found</string>
+    <string name="empty_search_list">Search returned no results</string>
+    <string name="text_start_hint">Please press the SCAN button to search for devices.\nThen select a remote control to connect to.</string>
+    <string name="action_scan">Scan</string>
+    <string name="action_info">Information</string>
+    <string name="no_location_services_title">Location Services Disabled</string>
+    <string name="no_location_services_msg">It may be required to enable the Location Services on your device in order to scan for Bluetooth Smart devices.</string>
+    <string name="no_location_services_scan">Continue</string>
+    <string name="enable_location_services">Enable</string>
+
+    <!-- MAIN -->
+
+    <string name="title_remote">Remote Control</string>
+    <string name="title_input">Sound</string>
+    <string name="title_logs">Logbook</string>
+    <string name="title_config">Configuration</string>
+    <string name="title_information">Information</string>
+    <string name="title_disclaimer">Disclaimer</string>
+    <string name="title_disconnect">Disconnect</string>
+
+    <!-- REMOTE CONTROL -->
+
+    <string name="button_power">PWR</string>
+    <string name="button_menu">MENU</string>
+    <string name="button_home">HOME</string>
+    <string name="button_escape">ESC</string>
+    <string name="button_up">UP</string>
+    <string name="button_down">DOWN</string>
+    <string name="button_left">LEFT</string>
+    <string name="button_right">RIGHT</string>
+    <string name="button_select">Scan</string>
+    <string name="button_mute">MUTE</string>
+    <string name="button_volume_increase">VI+</string>
+    <string name="button_volume_decrease">VI-</string>
+    <string name="button_increase">+</string>
+    <string name="button_decrease">-</string>
+    <string name="button_push_to_talk">PTT</string>
+    <string name="button_rewind">REW</string>
+    <string name="button_forward">FRW</string>
+    <string name="button_pp">PP</string>
+    <string name="button_stop">STOP</string>
+    <string name="button_one">1</string>
+    <string name="button_two">2</string>
+    <string name="button_three">3</string>
+    <string name="button_four">4</string>
+    <string name="button_five">5</string>
+    <string name="button_six">6</string>
+    <string name="button_seven">7</string>
+    <string name="button_eight">8</string>
+    <string name="button_nine">9</string>
+    <string name="button_zero">0</string>
+    <string name="button_hash">#</string>
+    <string name="button_star">*</string>
+
+    <!-- INPUT -->
+
+    <string name="title_audio">SOUND</string>
+    <string name="title_options">OPTIONS</string>
+    <string name="title_bitrate">Bitrate</string>
+    <string name="text_bitrate_default_value">Automatic</string>
+    <string name="title_mode">Mode</string>
+    <string name="title_voice_rec">Voice Recognition</string>
+    <string name="title_command">Command</string>
+    <string name="title_first_match">First match</string>
+    <string name="use_system_speech_rec_dialog">Use system dialog</string>
+    <string name="process_speech_rec_result">Process result</string>
+    <string name="speech_rec_error">Speech recognition error</string>
+    <string name="speech_rec_error_no_match">No recognition match</string>
+    <string name="speech_rec_error_timeout">Speech timeout</string>
+    <string name="speech_rec_error_permission">Missing required permission</string>
+    <string name="speech_rec_codec_error">FLAC encoder error</string>
+    <string name="speech_rec_network_failure">Network failure</string>
+    <string name="audio_rec_missing_permission">Missing required permission</string>
+    <string name="audio_rec_use_ptt">Toggle with audio button</string>
+    <string name="audio_save_success">Audio saved</string>
+    <string name="audio_save_failure">Failed to save audio</string>
+    <string name="playback_error">Playback error</string>
+    <string name="missing_keyword_text">Say something after the keyword</string>
+    <string name="unknown_keyword">
+        Available Keywords:
+        \n● Google: google, search
+        \n● IMDb: imdb, movie(s)
+        \n● YouTube: youtube, video(s)
+        \n● Browser (Google): chrome, web
+    </string>
+    <string name="request_url_encoding_error">Request URL encoding error</string>
+    <string name="no_activity_for_url_view">No application can handle this request. Please install a web browser.</string>
+    <string name="flashlight_incomplete">Say on/off for flashlight action</string>
+    <string name="flashlight_error">Flashlight action error</string>
+    <string name="flashlight_unsupported">Flashlight action not supported on this Android version</string>
+    <string name="flashlight_unavailable">Flashlight not available</string>
+    <string name="no_hid_connection">Audio Remote is not connected to the system as an audio source</string>
+    <string name="recording_failed">Failed to start recording.\nIs another app recording?</string>
+
+    <!-- CONFIGURATION -->
+
+    <string name="value_not_available">N/A</string>
+    <string name="invalid_value_msg">Invalid value. All values must be positive numbers.</string>
+    <string name="conn_params_section">Connection Parameters</string>
+    <string name="conn_interval">Conn. Interval</string>
+    <string name="min_interval">Min:</string>
+    <string name="max_interval">Max:</string>
+    <string name="min_interval_hint">9</string>
+    <string name="max_interval_hint">12</string>
+    <string name="conn_interval_unit">x 1.25ms</string>
+    <string name="curr_interval">%1$.2f ms</string>
+    <string name="invalid_interval_msg">Invalid connection interval.\nValid range is [6..3200].</string>
+    <string name="slave_latency">Slave Latency</string>
+    <string name="slave_latency_hint">30</string>
+    <string name="slave_latency_unit">events</string>
+    <string name="curr_slave_latency">%1$d events</string>
+    <string name="invalid_slave_latency_msg">Invalid slave latency.\nValid range is [0..499].</string>
+    <string name="conn_timeout">Conn. Timeout</string>
+    <string name="conn_timeout_hint">500</string>
+    <string name="conn_timeout_unit">x 10ms</string>
+    <string name="curr_conn_timeout">%1$d ms</string>
+    <string name="invalid_conn_timeout_msg">Invalid connection timeout.\nValid range is [10..3200].</string>
+    <string name="update_conn_params">Update Parameters</string>
+    <string name="packet_size">Audio Packet Size</string>
+    <string name="packet_size_hint">20</string>
+    <string name="packet_size_unit">bytes</string>
+    <string name="curr_packet_size">%1$d bytes (max=%2$d)</string>
+    <string name="invalid_packet_size_msg">Invalid audio packet size.\nValid range is [20..max].</string>
+    <string name="set_max">Set Auto Max</string>
+    <string name="set_fixed">Set Fixed</string>
+    <string name="app_config_section">Application</string>
+    <string name="voice_rec_partial_results">Voice recognition partial results</string>
+    <string name="auto_save_audio_capture">Auto save audio capture</string>
+    <string name="auto_pairing">Auto pairing</string>
+    <string name="auto_init_system_hid">Auto init system HID</string>
+
+    <!-- SEARCH -->
+
+    <string name="text_searching">Searching&#8230;</string>
+    <string name="action_search_google">Google</string>
+    <string name="action_search_imdb">IMDb</string>
+    <string name="action_search_youtube">YouTube</string>
+
+</resources>

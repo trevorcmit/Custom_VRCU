@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *******************************************************************************
+ *
+ * Copyright (C) 2017 Dialog Semiconductor.
+ * This computer program includes Confidential, Proprietary Information
+ * of Dialog Semiconductor. All Rights Reserved.
+ *
+ *******************************************************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_grey_light"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_medium"
+            android:text="@string/title_audio"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textIsSelectable="false"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/bit_rate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="2dp"
+            android:textSize="16sp"
+            android:textColor="@color/signal_bar_colour"
+            android:textIsSelectable="false"
+            android:textStyle="bold"/>
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/save_audio_button"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_toStartOf="@+id/pause_play_button"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            app:iiv_color="@color/signal_bar_colour"
+            app:iiv_icon="gmd-save" />
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/pause_play_button"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            app:iiv_color="@color/signal_bar_colour"
+            app:iiv_icon="gmd-play-circle-filled" />
+    </RelativeLayout>
+
+    <!-- Audio graph -->
+    <RelativeLayout
+        android:id="@+id/graph_container"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="@dimen/graph_height"
+        android:paddingLeft="@dimen/margin_large"
+        android:paddingRight="@dimen/margin_large"/>
+
+    <!-- Options -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:text="@string/title_options"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textIsSelectable="false"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_height"
+            android:weightSum="3"
+            android:background="@android:color/white"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_bitrate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/title_bitrate"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:textSize="16sp"
+                android:textIsSelectable="false"/>
+
+            <Spinner
+                android:id="@+id/spinner_variable_rate"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:entries="@array/bitrate_titles"
+                android:drawSelectorOnTop="true"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_grey_light"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_height"
+            android:weightSum="3"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_mode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/title_mode"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:textSize="16sp"
+                android:textIsSelectable="false"/>
+
+            <Spinner
+                android:id="@+id/spinner_mode"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:entries="@array/mode_titles"
+                android:drawSelectorOnTop="true"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_height"
+            android:weightSum="3"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/stream_button"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:background="@drawable/stream_button_bg"
+                    app:iiv_icon="gmd-mic-none"
+                    app:iiv_padding="5dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" >
+
+                <Spinner
+                    android:id="@+id/spinner_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/voice_rec_lang_names"
+                    android:drawSelectorOnTop="true"
+                    android:gravity="end" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_voice_rec"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_height"
+            android:weightSum="3"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+                <TextView
+                    android:id="@+id/audio_record_timer"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="80dp"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/signal_bar_colour"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <CheckBox
+                android:id="@+id/checkbox_voice_rec"
+                android:layout_marginStart="15dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/title_voice_rec"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_speech_rec"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_height"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/checkbox_speech_rec_dialog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/use_system_speech_rec_dialog" />
+
+            <CheckBox
+                android:id="@+id/checkbox_process_speech_rec_result"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/process_speech_rec_result" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_audio_rec"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_height"
+            android:weightSum="3"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_audio_rec_use_ptt"
+                android:layout_marginStart="15dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/audio_rec_use_ptt"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_command_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_height"
+                android:weightSum="3"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title_media"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/title_command"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
+                    android:textSize="16sp"
+                    android:textIsSelectable="false"/>
+
+                <Spinner
+                    android:id="@+id/spinner_command"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:entries="@array/voice_command_titles"
+                    android:drawSelectorOnTop="true"
+                    android:gravity="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_height"
+                android:weightSum="3"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_first_match"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="@string/title_first_match"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <TextView
+            android:id="@+id/voice_rec_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:textSize="18sp"
+            android:textColor="@color/signal_bar_colour"
+            android:textStyle="bold"
+            android:textIsSelectable="false"/>
+    </ScrollView>
+
+</LinearLayout>
