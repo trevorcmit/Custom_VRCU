@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
- *******************************************************************************
- *
+<!--*****************************************************************************
  * Copyright (C) 2017 Dialog Semiconductor.
  * This computer program includes Confidential, Proprietary Information
  * of Dialog Semiconductor. All Rights Reserved.
- *
- *******************************************************************************
--->
+*******************************************************************************-->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.diasemi.bleremote">
